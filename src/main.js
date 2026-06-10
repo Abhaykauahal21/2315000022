@@ -2,9 +2,9 @@ import './style.css'
 import typescriptLogo from './assets/typescript.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
-import { setupCounter } from './counter.ts'
+import { setupCounter } from './counter.js'
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
+document.querySelector('#app').innerHTML = `
 <section id="center">
   <div class="hero">
     <img src="${heroImg}" class="base" width="170" height="179">
@@ -13,7 +13,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   </div>
   <div>
     <h1>Get started</h1>
-    <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
+    <p>Edit <code>src/main.js</code> and save to test <code>HMR</code></p>
   </div>
   <button id="counter" type="button" class="counter"></button>
 </section>
@@ -57,4 +57,4 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="spacer"></section>
 `
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+setupCounter(document.querySelector('#counter'))
