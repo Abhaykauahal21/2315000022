@@ -47,12 +47,12 @@ export default function NotificationCard({ notification, onToggle }: Props) {
 
   return (
     <Card
-      sx={{
-        mb: 2,
-        opacity: isRead ? 0.65 : 1,
-        bgcolor: isRead ? 'grey.50' : '#fff',
-      }}
-    >
+  sx={{
+    mb: 2,
+    opacity: isRead ? 0.65 : 1,
+    bgcolor: isRead ? 'grey.50' : '#fff',
+  }}
+>
       <CardContent sx={{ '&:last-child': { pb: 2 } }}>
         <Stack direction="row" justifyContent="space-between" alignItems="flex-start">
           <Box sx={{ flex: 1 }}>
@@ -62,10 +62,10 @@ export default function NotificationCard({ notification, onToggle }: Props) {
                 label={cfg.label}
                 color={cfg.color}
                 size="small"
-                variant={isRead ? 'outlined' : 'filled'}
+                variant={!isRead ? 'outlined' : 'filled'}
                 sx={{
                   fontWeight: 600,
-                  bgcolor: isRead ? 'transparent' : cfg.bg,
+                  bgcolor: !isRead ? 'transparent' : cfg.bg,
                 }}
               />
               <Stack direction="row" spacing={0.5} alignItems="center">
